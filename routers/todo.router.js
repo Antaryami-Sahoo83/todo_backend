@@ -8,15 +8,11 @@ import {
 import authMiddleware from "../middleware/user.middleware.js";
 import roleAuthorization from "../middleware/roleAuthorization.js";
 
-authMiddleware
+const todoRouter = express.Router();
 
-const router = express.Router();
+todoRouter.get("/", authMiddleware, roleAuthorization(["user", "admin"]), getTodos);
+todoRouter.post("/", authMiddleware, roleAuthorization(["user", "admin"]), createTodo);
+todoRouter.put("/:id", authMiddleware, roleAuthorization(["user", "admin"]), updateTodo);
+todoRouter.delete("/:id", authMiddleware, roleAuthorization(["admin"]), deleteTodo);
 
-router.get("/", authMiddleware, roleAuthorization(["user", "admin"]), getTodos);
-router.post("/", authMiddleware, roleAuthorization(["user", "admin"]), createTodo);
-router.put("/:id", authMiddleware, roleAuthorization(["user", "admin"]), updateTodo);
-router.delete("/:id", authMiddleware, roleAuthorization(["admin"]), deleteTodo);
-
-export default router;
-
-
+export default todoRouter;
