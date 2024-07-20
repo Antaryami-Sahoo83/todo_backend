@@ -12,10 +12,10 @@ const authMiddleware = (req, res, next) => {
 
       try {
             const decoded = jwt.verify(token, process.env.JWT_SECRET);
-            req.user = decoded.user; // Set req.user to decoded user data
+            req.user = decoded.user;
             next();
       } catch (error) {
-            res.status(401).json({ message: "Invalid token." }); // Use 401 for unauthorized
+            res.status(401).json({ message: "Invalid token. Please Signin" }); 
       }
 };
 
