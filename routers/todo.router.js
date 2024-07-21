@@ -1,12 +1,12 @@
-import express from "express";
-import {
+const express = require("express");
+const {
       createTodo,
       getTodos,
       updateTodo,
       deleteTodo,
-} from "../controllers/todo.controller.js";
-import authMiddleware from "../middleware/user.middleware.js";
-import roleAuthorization from "../middleware/roleAuthorization.js";
+} = require("../controllers/todo.controller.js");
+const authMiddleware = require("../middleware/user.middleware.js");
+const roleAuthorization = require("../middleware/roleAuthorization.js");
 
 const todoRouter = express.Router();
 
@@ -15,4 +15,4 @@ todoRouter.post("/", authMiddleware, roleAuthorization(["user", "admin"]), creat
 todoRouter.put("/:id", authMiddleware, roleAuthorization(["user", "admin"]), updateTodo);
 todoRouter.delete("/:id", authMiddleware, roleAuthorization(["admin"]), deleteTodo);
 
-export default todoRouter;
+module.exports = todoRouter;
