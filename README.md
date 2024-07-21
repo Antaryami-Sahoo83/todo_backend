@@ -67,7 +67,7 @@ This will run the test suite, which includes various test cases to ensure that d
    &nbsp;&nbsp;&nbsp;&nbsp;This documentation provides detailed information on API endpoints and &nbsp;&nbsp;&nbsp;&nbsp;request/response formats.
 
 ➜ **Testing**  
-   &nbsp;&nbsp;&nbsp;&nbsp;Unit tests are written for all API endpoints to ensure correct functionality.  
+   &nbsp;&nbsp;&nbsp;&nbsp;Unit tests are written for all API endpoints using Mocha and Chai to ensure &nbsp;&nbsp;&nbsp;&nbsp;correct functionality.  
    &nbsp;&nbsp;&nbsp;&nbsp;The tests cover various scenarios including valid and invalid requests, &nbsp;&nbsp;&nbsp;&nbsp;authentication, and authorization.
 
 ## Models
