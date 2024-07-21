@@ -21,6 +21,35 @@ Install dependencies
 ```bash
   npm install
 ```
+##### Set up the database and create environment variable files:
+
+###### Create `.env`, `.env.development`, and `.env.test` files in the root of your project.
+&nbsp;
+
+In `.env` file:
+
+```env
+PORT=
+JWT_SECRET=
+```
+
+In `.env.development` file:
+
+```env
+DB_NAME=
+DB_USERNAME=
+DB_PASSWORD=
+JWT_SECRET=
+```
+
+In `.env.test` file:
+
+```env
+DB_NAME=
+DB_USERNAME=
+DB_PASSWORD=
+JWT_SECRET=
+```
 
 Start the server
 
@@ -38,6 +67,7 @@ Access the application by visiting http://localhost:3000 in your web browser.
 ```
 
 This will run the test suite, which includes various test cases to ensure that different parts of the application function correctly. Testing will cover scenarios such as user registration, authentication, and CRUD operations for todos.
+
 
 ## Features
 ➜ **User Management**  
