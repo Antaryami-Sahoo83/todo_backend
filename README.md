@@ -5,6 +5,7 @@
 The Todo Application API is a RESTful API built with Node.js and Express for managing todos, with MongoDB used for database storage. &nbsp;It features user authentication and role-based authorization to control access to CRUD operations on todos. Users must sign up and sign in to obtain a JSON Web Token (JWT), which is required for all operations on todos.
 
 
+
 ## Installation
 
 To run the project locally on your machine, follow these steps:
@@ -97,7 +98,7 @@ This will run the test suite, which includes various test cases to ensure that d
    &nbsp;&nbsp;&nbsp;&nbsp;This documentation provides detailed information on API endpoints and &nbsp;&nbsp;&nbsp;&nbsp;request/response formats.
 
 ➜ **Testing**  
-   &nbsp;&nbsp;&nbsp;&nbsp;Unit tests are written for all API endpoints to ensure correct functionality.  
+   &nbsp;&nbsp;&nbsp;&nbsp;Unit tests are written for all API endpoints using Mocha and Chai to ensure &nbsp;&nbsp;&nbsp;&nbsp;correct functionality.  
    &nbsp;&nbsp;&nbsp;&nbsp;The tests cover various scenarios including valid and invalid requests, &nbsp;&nbsp;&nbsp;&nbsp;authentication, and authorization.
 
 ## Models
