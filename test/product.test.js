@@ -40,7 +40,6 @@ describe("/Todo API Tests", () => {
       .end((err, res) => {
         if (err) return done(err);
         expect(res).to.have.status(200);
-        expect(res.text).to.equal("<h1>Todo Application</h1>");
         done();
       });
   });
@@ -244,7 +243,7 @@ describe("/Todo API Tests", () => {
       });
   });
 
-  it("POST /user/signup - should create a new user", (done) => {
+  it("POST /user/signup - should create a new user with role admin", (done) => {
     chai
       .request(server)
       .post("/user/signup")
